@@ -1,0 +1,148 @@
+body {
+    background-image: url("bg-1.jpg");
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    filter: blur(200px);
+    backdrop-filter: blur(200px);
+    transition: filter 0.5s linear, backdrop-filter 0.5s linear;
+}
+
+#container {
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    clip-path: inset(2px 2px 2px 2px);
+    background: rgba(0, 0, 0, 0.4);
+    float: left;
+}
+
+.block {
+    height: 46px;
+    width: 46px;
+    background: linear-gradient(to right, black, #434343);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    line-height: 46px;
+    font-weight: bold;
+    font-size: 25px;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#info {
+    height: 190px;
+    width: 496px;
+    background: rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-rows: 63.3px 63.3px 63.3px;
+    grid-template-columns: 165.3px 165.3px 165.3px;
+}
+
+#input-info {
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#input-string {
+    background: rgba(0, 0, 0, 0.4);
+    width: 310px;
+    height: 45px;
+    text-align: center;
+    line-height: 39px;
+    font-size: 24px;
+    letter-spacing: 5px;
+    box-sizing: border-box;
+    border: 3px solid white;
+}
+
+#alphabetic-keys, #other-keys {
+    width: 310px;
+    height: 45px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#timer, #backspace-key, #space-key, .alphabetic-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clock {
+    border: 3px solid white;
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 50px;
+    line-height: 95px;
+}
+
+.alphabetic-key {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+#backspace-key {
+    position: relative;
+    width: 98px;
+    height: 45px;
+}
+
+#space-key {
+    position: relative;
+    width: 204px;
+    height: 45px;
+}
+
+.alphabetic-key span {
+    position: absolute;
+    font-size: 20px;
+}
+
+#backspace-key span, #space-key span {
+    position: absolute;
+    font-size: 15px;
+}
+
+.alphabetic-key img, #backspace-key img, #space-key img {
+    position: absolute;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+#timer {
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 1;
+}
+
+#score {
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+    line-height: 63.3px;
+    font-size: 20px;
+    text-align: center;
+}
